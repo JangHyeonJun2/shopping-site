@@ -14,7 +14,6 @@ on:
 
 jobs:
   build-dev:
-    environment: dev
     runs-on: ubuntu-latest
     steps:
       # 깃헙 Repository 코드 내려받기

@@ -19,7 +19,6 @@ env:
 jobs:
   ci-dev:
     if: github.event.pull_request.merged == true
-    environment: dev
     runs-on: ubuntu-latest
     steps:
       # 깃헙 Repository 코드 내려받기

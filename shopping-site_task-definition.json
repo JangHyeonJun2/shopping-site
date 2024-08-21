@@ -1,5 +1,5 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:038462778065:task-definition/shopping-site_task2:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:038462778065:task-definition/shopping-site_task-definition:1",
     "containerDefinitions": [
         {
             "name": "shopping-site_container",
@@ -7,7 +7,7 @@
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "shopping-site_container-8080-tcp",
+                    "name": "springboot",
                     "containerPort": 8080,
                     "hostPort": 8080,
                     "protocol": "tcp",
@@ -23,7 +23,7 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/shopping-site_task2",
+                    "awslogs-group": "/ecs/shopping-site_task-definition",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
@@ -35,7 +35,7 @@
             "systemControls": []
         }
     ],
-    "family": "shopping-site_task2",
+    "family": "shopping-site_task-definition",
     "taskRoleArn": "arn:aws:iam::038462778065:role/ecsTaskExecutionRole",
     "executionRoleArn": "arn:aws:iam::038462778065:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
@@ -80,7 +80,7 @@
         "FARGATE"
     ],
     "requiresCompatibilities": [
-        "FARGATE"
+        "EC2"
     ],
     "cpu": "1024",
     "memory": "3072",
@@ -88,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-08-18T15:44:53.459Z",
+    "registeredAt": "2024-08-24T06:29:26.084Z",
     "registeredBy": "arn:aws:iam::038462778065:root",
     "tags": []
 }

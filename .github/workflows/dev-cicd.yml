@@ -46,16 +46,14 @@ jobs:
       # 운영 환경 설정 파일 생성
       - name: Make application.yml
         run: |
-          mkdir ./src/main/resources
           cd ./src/main/resources
           touch ./application.yml
           echo "${{ secrets.YML }}" > ./application.yml
         shell: bash
 
       # 테스트 환경 설정 파일 생성
-      - name: Make Test application.yml
+      - name: Make application-test.yml
         run: |
-          mkdir ./src/test/resources
           cd ./src/test/resources
           touch ./application-test.yml
           echo "${{ secrets.TEST_YML }}" > ./application-test.yml

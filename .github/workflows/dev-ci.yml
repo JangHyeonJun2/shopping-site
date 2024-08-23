@@ -49,6 +49,7 @@ jobs:
       # 테스트 환경 설정 파일 생성
       - name: make application-test.yml
         run: |
+          mkdir ./src/test/resources 
           cd ./src/test/resources 
           touch ./application-test.yml 
           echo "${{ secrets.TEST_YML }}" > ./application-test.yml

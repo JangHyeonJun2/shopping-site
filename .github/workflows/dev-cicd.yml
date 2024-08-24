@@ -12,7 +12,7 @@ env:
   AWS_REGION: ap-northeast-2
   ECR_REPOSITORY: shopping-site_ecr
   ECS_CONTAINER: shopping-site_container
-  ECS_SERVICE: shopping-site_service
+  ECS_SERVICE: shopping-site_svc
   ECS_CLUSTER: shopping-site_cluster
   ECS_TASK_DEFINITION: shopping-site_task-definition.json
 
